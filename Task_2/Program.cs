@@ -11,8 +11,13 @@ Console.Write("Введите значение b2: ");
 double b2 = double.Parse(Console.ReadLine());
 Console.Write("Введите значение k2: ");
 double k2 = double.Parse(Console.ReadLine());
+if (k1 == k2)
+{
+    Console.WriteLine($"Прямые параллельны, пересечений нет!");
+    return;
+}
 double[] array = GetIntersection(b1, k1, b2, k2);
-Console.WriteLine($"({array[0]:f1};{array[1]:f1})");
+Console.WriteLine($"({array[0]:f3};{array[1]:f3})");
 double[] GetIntersection(double b1, double k1, double b2, double k2)
 {
     double x = (b2 - b1) / (k1 - k2);
